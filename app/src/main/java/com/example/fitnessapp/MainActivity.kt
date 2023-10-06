@@ -17,19 +17,3 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
     }
 }
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FitnessAppTheme {
-        Greeting("Android")
-    }
-}
