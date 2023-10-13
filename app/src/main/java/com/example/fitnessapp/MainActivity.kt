@@ -1,6 +1,7 @@
 package com.example.fitnessapp
 
 import android.app.Application
+import android.app.Fragment
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Email
 import android.widget.Button
@@ -41,7 +42,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
 @Entity
 data class User(
