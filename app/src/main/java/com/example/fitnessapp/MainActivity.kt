@@ -1,20 +1,16 @@
 package com.example.fitnessapp
 
 import android.app.Application
-import android.app.Fragment
+import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Email
 import android.widget.Button
 import android.widget.EditText
+import android.widget.SimpleAdapter.ViewBinder
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.fragment.app.FragmentController
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.commit
 import androidx.room.ColumnInfo
 import androidx.room.Dao
 import androidx.room.Database
@@ -24,7 +20,6 @@ import androidx.room.Insert
 import androidx.room.PrimaryKey
 import androidx.room.Query
 import androidx.room.RoomDatabase
-import com.example.fitnessapp.ui.theme.FitnessAppTheme
 import kotlinx.coroutines.selects.select
 
 
@@ -33,15 +28,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout)
 
-        val button = findViewById<Button>(R.id.button_id)
-        val username = findViewById<EditText>(R.id.username)
-        val signup = findViewById<Button>(R.id.signup)
 
-        signup.setOnClickListener(){
 
-        }
+
+
     }
 }
+
 
 @Entity
 data class User(
